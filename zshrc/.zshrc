@@ -100,3 +100,5 @@ source $ZSH/oh-my-zsh.sh
 #
 #
 export PATH="$PATH:/home/danielsa/development/flutter/bin"
+export PATH="$PATH:/home/danielsa/development/android-studio/bin"
+export PATH="$PATH:/home/danielsa/Android/Sdk/platform-tools"

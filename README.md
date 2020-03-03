@@ -1,1 +1,1 @@
-# Configuration
+# Daniel's .dotfiles

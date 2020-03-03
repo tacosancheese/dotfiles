@@ -99,6 +99,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 #
+alias v="nvim"
+
 export PATH="$PATH:/home/danielsa/development/flutter/bin"
 export PATH="$PATH:/home/danielsa/development/android-studio/bin"
 export PATH="$PATH:/home/danielsa/Android/Sdk/platform-tools"
+

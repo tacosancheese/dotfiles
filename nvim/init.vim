@@ -5,6 +5,11 @@ call plug#begin()
 Plug 'preservim/nerdtree'
 Plug 'airblade/vim-rooter'
 Plug 'tpope/vim-surround'
+
+" Dart
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'natebosch/vim-lsc'
+Plug 'natebosch/vim-lsc-dart'
 call plug#end()
 
 set autoindent
@@ -14,7 +19,10 @@ set nowrap
 set title
 set relativenumber
 set ruler
-set scrolloff=3 " Keep 3 lines below and above the cursor
+set scrolloff=3 
+set shiftwidth=2
+set expandtab
+set smartindent
 
 " disable arrow key iour: vim, see https://goo.gl/s1yfh4.
 nnoremap <Up> <nop>
@@ -26,21 +34,6 @@ inoremap <Down> <nop>
 inoremap <Left> <nop>
 inoremap <Right> <nop>
 
-" Copy to clipboard
-vnoremap  <leader>y  "+y
-nnoremap  <leader>Y  "+yg_
-nnoremap  <leader>y  "+y
-nnoremap  <leader>yy  "+yy
-
-" Paste from clipboard
-nnoremap <leader>p "+p
-nnoremap <leader>P "+P
-vnoremap <leader>p "+p
-vnoremap <leader>P "+P
-
-" see https://stackoverflow.com/a/1346777/6064933
-nnoremap - $l
-
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeHijackNetrw=0
@@ -49,3 +42,9 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+" Dart
+let g:dart_format_on_save = 1
+let g:dart_style_guide = 2
+let g:lsc_auto_map = v:true
+
+autocmd CompleteDone * silent! pclose

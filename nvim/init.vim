@@ -24,6 +24,10 @@ set shiftwidth=2
 set expandtab
 set smartindent
 
+" tabs
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+
 " disable arrow key iour: vim, see https://goo.gl/s1yfh4.
 nnoremap <Up> <nop>
 nnoremap <Down> <nop>

@@ -35,7 +35,7 @@ inoremap <Left> <nop>
 inoremap <Right> <nop>
 
 " NERDTree
-map <C-n> :NERDTreeToggle<CR>
+map <C-w> :NERDTreeToggle<CR>
 let g:NERDTreeHijackNetrw=0
 
 autocmd StdinReadPre * let s:std_in=1

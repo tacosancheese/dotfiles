@@ -10,6 +10,9 @@ Plug 'tpope/vim-surround'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'natebosch/vim-lsc'
 Plug 'natebosch/vim-lsc-dart'
+
+" Flutter
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 set autoindent
@@ -41,7 +44,7 @@ inoremap <Left> <nop>
 inoremap <Right> <nop>
 
 " NERDTree
-map <C-n> :NERDTreeToggle<CR>
+map <leader>w :NERDTreeToggle<CR>
 let g:NERDTreeHijackNetrw=0
 
 autocmd StdinReadPre * let s:std_in=1

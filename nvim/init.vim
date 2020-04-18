@@ -6,6 +6,7 @@ Plug 'preservim/nerdtree'
 Plug 'airblade/vim-rooter'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
+Plug 'morhetz/gruvbox'
 
 " Dart
 Plug 'dart-lang/dart-vim-plugin'
@@ -43,6 +44,9 @@ inoremap <Up> <nop>
 inoremap <Down> <nop>
 inoremap <Left> <nop>
 inoremap <Right> <nop>
+
+" Theme
+colorscheme gruvbox
 
 " NERDTree
 map <leader>w :NERDTreeToggle<CR>

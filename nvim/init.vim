@@ -5,6 +5,7 @@ call plug#begin()
 Plug 'preservim/nerdtree'
 Plug 'airblade/vim-rooter'
 Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
 
 " Dart
 Plug 'dart-lang/dart-vim-plugin'
@@ -71,3 +72,4 @@ let g:lsc_auto_map = {
     \ 'Completion': 'completefunc',
     \}
 autocmd CompleteDone * silent! pclose
+

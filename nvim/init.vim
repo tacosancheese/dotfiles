@@ -23,6 +23,8 @@ set scrolloff=3
 set shiftwidth=2
 set expandtab
 set smartindent
+set splitbelow
+set splitright
 
 " tabs
 nnoremap <C-Left> :tabprevious<CR>
@@ -39,7 +41,7 @@ inoremap <Left> <nop>
 inoremap <Right> <nop>
 
 " NERDTree
-map <C-w> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeHijackNetrw=0
 
 autocmd StdinReadPre * let s:std_in=1

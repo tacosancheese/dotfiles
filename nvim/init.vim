@@ -1,4 +1,4 @@
-let mapleader=" "
+let mapleader=","
 
 " plugins
 call plug#begin()
@@ -51,6 +51,20 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " Dart
 let g:dart_format_on_save = 1
 let g:dart_style_guide = 2
-let g:lsc_auto_map = v:true
 
+let g:lsc_auto_map = {
+    \ 'GoToDefinition': '',
+    \ 'GoToDefinitionSplit': '<leader>def',
+    \ 'FindReferences': '<leader>ref',
+    \ 'NextReference': '<leader>refn',
+    \ 'PreviousReference': '<leader>refb',
+    \ 'FindImplementations': '<leader>imp',
+    \ 'FindCodeActions': '<leader>act',
+    \ 'Rename': '<leader>rnm',
+    \ 'ShowHover': v:true,
+    \ 'DocumentSymbol': '',
+    \ 'WorkspaceSymbol': '',
+    \ 'SignatureHelp': '<leader>sig',
+    \ 'Completion': 'completefunc',
+    \}
 autocmd CompleteDone * silent! pclose

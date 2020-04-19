@@ -62,13 +62,13 @@ let g:dart_style_guide = 2
 
 let g:lsc_auto_map = {
     \ 'GoToDefinition': '',
-    \ 'GoToDefinitionSplit': '<leader>def',
-    \ 'FindReferences': '<leader>ref',
-    \ 'NextReference': '<leader>refn',
-    \ 'PreviousReference': '<leader>refb',
-    \ 'FindImplementations': '<leader>imp',
-    \ 'FindCodeActions': '<leader>act',
-    \ 'Rename': '<leader>rnm',
+    \ 'GoToDefinitionSplit': '<leader>dgd',
+    \ 'FindReferences': '<leader>dgr',
+    \ 'NextReference': '',
+    \ 'PreviousReference': '',
+    \ 'FindImplementations': '<leader>dgi',
+    \ 'FindCodeActions': '<leader>dga',
+    \ 'Rename': '<leader>dR',
     \ 'ShowHover': v:true,
     \ 'DocumentSymbol': '',
     \ 'WorkspaceSymbol': '',
@@ -77,3 +77,10 @@ let g:lsc_auto_map = {
     \}
 autocmd CompleteDone * silent! pclose
 
+" Dart/Flutter
+nmap <leader>fgd <Plug>(coc-definition)
+nmap <leader>fgy <Plug>(coc-type-definition)
+nmap <leader>fgi <Plug>(coc-implementation)
+nmap <leader>fgr <Plug>(coc-references)
+
+map <leader>- :CocList commands<CR>

@@ -4,14 +4,11 @@ let mapleader=","
 call plug#begin()
 Plug 'preservim/nerdtree'
 Plug 'airblade/vim-rooter'
-Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'morhetz/gruvbox'
 
 " Dart
 Plug 'dart-lang/dart-vim-plugin'
-Plug 'natebosch/vim-lsc'
-Plug 'natebosch/vim-lsc-dart'
 
 " Flutter
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -60,27 +57,14 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let g:dart_format_on_save = 1
 let g:dart_style_guide = 2
 
-let g:lsc_auto_map = {
-    \ 'GoToDefinition': '',
-    \ 'GoToDefinitionSplit': '<leader>dgd',
-    \ 'FindReferences': '<leader>dgr',
-    \ 'NextReference': '',
-    \ 'PreviousReference': '',
-    \ 'FindImplementations': '<leader>dgi',
-    \ 'FindCodeActions': '<leader>dga',
-    \ 'Rename': '<leader>dR',
-    \ 'ShowHover': v:true,
-    \ 'DocumentSymbol': '',
-    \ 'WorkspaceSymbol': '',
-    \ 'SignatureHelp': '<leader>sig',
-    \ 'Completion': 'completefunc',
-    \}
-autocmd CompleteDone * silent! pclose
-
-" Dart/Flutter
-nmap <leader>fgd <Plug>(coc-definition)
-nmap <leader>fgy <Plug>(coc-type-definition)
-nmap <leader>fgi <Plug>(coc-implementation)
-nmap <leader>fgr <Plug>(coc-references)
+" coc 
+nmap <leader>gd <Plug>(coc-definition)
+nmap <leader>gy <Plug>(coc-type-definition)
+nmap <leader>gi <Plug>(coc-implementation)
+nmap <leader>gr <Plug>(coc-references)
 
 map <leader>- :CocList commands<CR>
+
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"<Paste>
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
